@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Budget Status and Monthly Budget Section -->
+    <div class="col-md-8">
+        <div class="card bg-dark border-0 shadow-sm">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="card-title mb-0">Monthly Overview</h4>
+                    <!-- Moved budget form inline -->
+                    <form id="budget-form" action="{{ url_for('set_budget') }}" method="POST" class="d-flex gap-2 align-items-center">
+                        <div class="input-group" style="width: auto;">
+                            <span class="input-group-text">₹</span>
+                            <input type="number" class="form-control" id="budget" name="budget" step="0.01" min="0" placeholder="Set budget" required style="width: 150px;">
+                            <button type="submit" class="btn btn-primary hover-button">Update</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="progress mb-4" style="height: 2rem;">
+                    <div class="progress-bar"
+                         role="progressbar"
+                         style="width: 0%"
+                         aria-valuenow="0"
+                         aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="budget-stat text-center">
+                            <span class="d-block text-muted mb-2">Spent</span>
+                            <span class="h4 mb-0" data-budget-stat="spent">₹0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="budget-stat text-center">
+                            <span class="d-block text-muted mb-2">Budget</span>
+                            <span class="h4 mb-0" data-budget-stat="budget">₹0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="budget-stat text-center">
+                            <span class="d-block text-muted mb-2">Remaining</span>
+                            <span class="h4 mb-0" data-budget-stat="remaining">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transaction Form -->
+    <div class="col-md-4">
+        <div class="card bg-dark border-0 shadow-sm hover-card">
+            <div class="card-body p-4">
+                <h5 class="card-title mb-3">Add Transaction</h5>
+                <form id="transaction-form" action="{{ url_for('add_transaction') }}" method="POST">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text">₹</span>
+                            <input type="number" class="form-control" id="amount" name="amount" step="0.01" placeholder="Enter amount" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="description" name="description" placeholder="What's this for?" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="payment_method" class="form-label">Payment Method</label>
+                        <select class="form-select" id="payment_method" name="payment_method" required>
+                            {% for method_id, method in payment_methods.items() %}
+                            <option value="{{ method_id }}">{{ method.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 hover-button">Add Transaction</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transactions List -->
+    <div class="col-12">
+        <div class="card bg-dark border-0 shadow-sm">
+            <div class="card-body p-4">
+                <h5 class="card-title mb-4">Recent Transactions</h5>
+                <div class="transaction-list">
+                    <!-- Transactions will be dynamically populated via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

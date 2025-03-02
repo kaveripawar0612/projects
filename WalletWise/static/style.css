@@ -1,0 +1,283 @@
+/* Custom styles on top of Bootstrap dark theme */
+:root {
+    --progress-low: #198754;      /* Green for < 50% */
+    --progress-medium: #ffc107;   /* Yellow for 50-75% */
+    --progress-high: #fd7e14;     /* Orange for 75-90% */
+    --progress-danger: #dc3545;   /* Red for > 90% */
+}
+
+.transaction-list {
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.budget-stat {
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--bs-gray-800);
+}
+
+.budget-stat:hover {
+    transform: translateY(-4px);
+    background: var(--bs-gray-700);
+}
+
+.payment-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bs-gray-800);
+    transition: all 0.3s ease;
+}
+
+.payment-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.progress {
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--bs-gray-800);
+    overflow: hidden;
+}
+
+.progress-bar {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Dynamic progress bar colors based on percentage */
+.progress-bar[aria-valuenow^="0"],
+.progress-bar[aria-valuenow^="1"],
+.progress-bar[aria-valuenow^="2"],
+.progress-bar[aria-valuenow^="3"],
+.progress-bar[aria-valuenow^="4"] {
+    background-color: var(--progress-low);
+}
+
+.progress-bar[aria-valuenow^="5"],
+.progress-bar[aria-valuenow^="6"],
+.progress-bar[aria-valuenow^="7"] {
+    background-color: var(--progress-medium);
+}
+
+.progress-bar[aria-valuenow^="8"] {
+    background-color: var(--progress-high);
+}
+
+.progress-bar[aria-valuenow^="9"],
+.progress-bar[aria-valuenow="100"] {
+    background-color: var(--progress-danger);
+}
+
+.transaction-card {
+    transition: all 0.3s ease;
+    border: 1px solid var(--bs-gray-800) !important;
+    transform-origin: left center;
+}
+
+.transaction-card:hover {
+    transform: translateX(10px) scale(1.02);
+    border-color: var(--bs-gray-700) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Calculator styles */
+.calculator {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.calc-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.calc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calc-btn:active {
+    transform: translateY(1px);
+}
+
+/* Enhanced hover effects */
+.hover-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hover-button {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hover-button:active {
+    transform: translateY(1px);
+}
+
+/* Pulse animation */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Custom scrollbar styling */
+.transaction-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.transaction-list::-webkit-scrollbar-track {
+    background: var(--bs-gray-900);
+    border-radius: 3px;
+}
+
+.transaction-list::-webkit-scrollbar-thumb {
+    background: var(--bs-gray-700);
+    border-radius: 3px;
+}
+
+.transaction-list::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-gray-600);
+}
+
+/* Form styling */
+.form-control, .form-select {
+    border-color: var(--bs-gray-700);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+    transform: translateY(-1px);
+}
+
+/* Flash message animations */
+.flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%) translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal animations */
+.modal.fade .modal-dialog {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* Add these new styles to your existing CSS */
+
+/* Avatar selection styles */
+.avatar-option {
+    position: relative;
+}
+
+.avatar-label {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--bs-gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.avatar-label:hover {
+    transform: scale(1.1);
+    border-color: var(--bs-primary);
+}
+
+input[type="radio"]:checked + .avatar-label {
+    border-color: var(--bs-primary);
+    background: var(--bs-primary);
+    transform: scale(1.1);
+}
+
+/* Loading animation */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.loading-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-spinner {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
