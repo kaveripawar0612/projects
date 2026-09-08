@@ -1,0 +1,54 @@
+Date,Order_ID,Region,Category,Product,Units,Revenue,Profit
+2025-01-01,O0001,South,Furniture,Desk,6,53374.44,8247.93
+2025-01-08,O0002,East,Office Supplies,Printer Ink,9,10608.13,1404.11
+2025-01-15,O0003,West,Electronics,Laptop,9,225100.84,20765.26
+2025-01-22,O0004,North,Furniture,Desk,12,77410.96,13138.19
+2025-01-29,O0005,South,Office Supplies,Printer Ink,2,2691.59,389.63
+2025-02-05,O0006,East,Electronics,Laptop,13,347662.95,67548.8
+2025-02-12,O0007,West,Furniture,Desk,14,99159.66,15554.29
+2025-02-19,O0008,North,Office Supplies,Printer Ink,10,10860.4,2254.94
+2025-02-26,O0009,South,Electronics,Laptop,2,57025.89,6249.41
+2025-03-05,O0010,East,Furniture,Desk,8,74473.69,7643.89
+2025-03-12,O0011,West,Office Supplies,Printer Ink,5,5723.16,805.65
+2025-03-19,O0012,North,Electronics,Laptop,3,74032.59,8500.74
+2025-03-26,O0013,South,Furniture,Desk,14,106282.83,17128.35
+2025-04-02,O0014,East,Office Supplies,Printer Ink,12,13112.72,2044.35
+2025-04-09,O0015,West,Electronics,Laptop,9,208259.52,36934.06
+2025-04-16,O0016,North,Furniture,Desk,7,46670.58,8075.41
+2025-04-23,O0017,South,Office Supplies,Printer Ink,13,16582.17,2370.58
+2025-04-30,O0018,East,Electronics,Laptop,6,146000.53,22073.63
+2025-05-07,O0019,West,Furniture,Desk,11,102306.1,11322.91
+2025-05-14,O0020,North,Office Supplies,Printer Ink,4,4807.59,893.99
+2025-05-21,O0021,South,Electronics,Laptop,9,227061.56,34179.72
+2025-05-28,O0022,East,Furniture,Desk,2,17070.47,2641.06
+2025-06-04,O0023,West,Office Supplies,Printer Ink,11,13328.54,2643.68
+2025-06-11,O0024,North,Electronics,Laptop,14,348519.2,84403.87
+2025-06-18,O0025,South,Furniture,Desk,13,96048.27,17359.87
+2025-06-25,O0026,East,Office Supplies,Printer Ink,10,13768.95,1437.71
+2025-07-02,O0027,West,Electronics,Laptop,9,239331,46068.98
+2025-07-09,O0028,North,Furniture,Desk,14,113458.58,9841.38
+2025-07-16,O0029,South,Office Supplies,Printer Ink,8,10528.69,1711.86
+2025-07-23,O0030,East,Electronics,Laptop,14,375543.27,62087.44
+2025-07-30,O0031,West,Furniture,Desk,7,62402.29,15084.33
+2025-08-06,O0032,North,Office Supplies,Printer Ink,12,14514.52,3303.18
+2025-08-13,O0033,South,Electronics,Laptop,4,100895.61,15972.5
+2025-08-20,O0034,East,Furniture,Desk,13,103913.44,11796.24
+2025-08-27,O0035,West,Office Supplies,Printer Ink,8,8709.79,1047.61
+2025-09-03,O0036,North,Electronics,Laptop,3,86270.15,10957.67
+2025-09-10,O0037,South,Furniture,Desk,14,97474.92,14401.53
+2025-09-17,O0038,East,Office Supplies,Printer Ink,9,9275.68,1780.81
+2025-09-24,O0039,West,Electronics,Laptop,11,274561.88,44045.08
+2025-10-01,O0040,North,Furniture,Desk,7,54380.59,9895.92
+2025-10-08,O0041,South,Office Supplies,Printer Ink,10,9799.55,2046.37
+2025-10-15,O0042,East,Electronics,Laptop,14,281000.06,42555.68
+2025-10-22,O0043,West,Furniture,Desk,7,65846.88,7651.15
+2025-10-29,O0044,North,Office Supplies,Printer Ink,13,16272.49,3593.57
+2025-11-05,O0045,South,Electronics,Laptop,2,43719.98,9535.1
+2025-11-12,O0046,East,Furniture,Desk,7,59565.15,6106.65
+2025-11-19,O0047,West,Office Supplies,Printer Ink,10,12212.5,1845.69
+2025-11-26,O0048,North,Electronics,Laptop,11,306045.32,69070.1
+2025-12-03,O0049,South,Furniture,Desk,2,14211.71,2467.04
+2025-12-10,O0050,East,Office Supplies,Printer Ink,11,15708.74,1989.1
+2025-12-17,O0051,West,Electronics,Laptop,2,59689.31,11101.14
+2025-12-24,O0052,North,Furniture,Desk,3,23438.69,4740.93
+2025-12-31,O0053,South,Office Supplies,Printer Ink,2,2481.7,268.1
